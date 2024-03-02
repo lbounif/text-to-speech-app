@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import AWS from 'aws-sdk';
 import './SpeechConverter.css';
 
-AWS.config.update({
-  accessKeyId: 'AKIA6ODU7LEHLYAH3YMR',
-  secretAccessKey: 'MpjrJ7fN+Yz7iRODBLMPHYrCz6nTU3z6Ol8Wi9e6',
-  region: 'us-east-1',
+AWS.config.update({ //replace with your AWS account configuration
+  accessKeyId: '', 
+  secretAccessKey: '',
+  region: '',
 });
 
 const polly = new AWS.Polly();
@@ -32,7 +32,7 @@ const SpeechConverter = () => {
 
   return (
     <div>
-      <h1>Speech-to-Text Converter</h1>
+      <h1>Text-to-Speech Converter</h1>
       <textarea
         placeholder="Enter text to convert to speech..."
         value={textToSpeech}
